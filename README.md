@@ -9,9 +9,7 @@
 - Perform well placement optimization using a surrogate model as objective function in a optimization method
 
 ## Capabilities
-- Evaluate surrogate models either built by:
-  - A machine learning regression model (RM)
-  - Or a dimensionality reduction algorithm (DR) and a machine learning regression model
+- Evaluate surrogate models built by a machine learning regression model (RM)
 - Implemented RMs:
   - Support Vector Regression (SVR)
   - Kernel Ridge Regression (KRR)
@@ -19,32 +17,36 @@
   - Elastic Net (ENET)
   - Gradient Tree Boosting (GTB)
   - K-Nearest Neighbor (KNN)
+- Use Genetic Algorithm (GA) to search for a new production strategy
 
 ## Methodology
 - Best model found by nested cross-validation
   - Inner loop does model selection (parameter adjustment)
   - Outter loop evaluates model in validation set
- - **Output:** best model RMSE calculated using an out-of-sample test data
- - **Output:** scatter plot of the best model predictions against the simulator output - consider whole data set
+  - Genetic algorithm searches for a new production strategy using the model
+- **Output:** best model RMSE calculated using an out-of-sample test data
+- **Output:** scatter plot of the best model predictions against the simulator output - consider whole data set
 
 ## Dependencies
 
 ```bash
-pip3 install numpy pandas matplotlib scikit-learn
+pip3 install numpy scikit-learn pandas matplotlib xgboost
 ```
 
 ## Running
 
 ```bash
-python3 run.py DATASET_NAME MODEL_NAME
+python3 run.py MODEL_NAME
 ```
+
+Where `MODEL_NAME` must be one of `GTB`, `KRR`, `MLP`, `ENET`, `KNN`, `GPR`, `XGBOOST` or `SVR`
 
 Examples:
 ```bash
-python3 run.py dataUNISIM1 GTB 
+python3 train.py GTB
 ```
 
 ```bash
-python3 run.py dataUNISIM1 KRR 
+python3 train.py KRR
 ```
 
