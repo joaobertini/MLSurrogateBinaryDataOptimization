@@ -36,7 +36,7 @@ pip3 install numpy pandas matplotlib scikit-learn
 ## Running
 
 ```bash
-python3 run.py DATASET_NAME MODEL_NAME REDUCER_NAME REDUCER_DIMENSION
+python3 run.py DATASET_NAME MODEL_NAME
 ```
 
 Examples:
