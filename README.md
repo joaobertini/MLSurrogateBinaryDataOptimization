@@ -41,10 +41,10 @@ python3 run.py DATASET_NAME MODEL_NAME
 
 Examples:
 ```bash
-python3 run.py dataUNISIM1 GTB PCA 5
+python3 run.py dataUNISIM1 GTB 
 ```
 
 ```bash
-python3 run.py dataUNISIM1 KRR NONE 0
+python3 run.py dataUNISIM1 KRR 
 ```
 
