@@ -23,7 +23,9 @@
 - Best model found by nested cross-validation
   - Inner loop does model selection (parameter adjustment)
   - Outter loop evaluates model in validation set
-  - Genetic algorithm searches for a new production strategy using the model
+- Genetic algorithm searches for a new production strategy using the model
+  - Outer loop of 5000 iterations, each with a population of 500
+  - Crossover with a probability of 90% and mutations with a probability of 5%
 - **Output:** best model RMSE calculated using an out-of-sample test data
 - **Output:** scatter plot of the best model predictions against the simulator output - consider whole data set
 
